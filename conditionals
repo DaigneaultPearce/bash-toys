@@ -1,0 +1,27 @@
+#!/bin/bash
+
+#read input from user with -p save to name variable
+read -p "What is your name? " name
+
+#print user input
+echo "Hello $name"
+
+#read users age into age variable
+read -p "How old are you? " age
+
+#if statement syntax
+#use spaces after and before brackets
+#-ge is greater than or equal to
+#-eq is equal to
+#end if statements with fi
+#elif is else if
+
+if [ $age -ge 16 ]
+then
+	echo "You can drive"
+elif [ $age -eq 15 ]
+then
+	echo "You can drive next year"
+else
+	echo "You can't drive"
+fi
