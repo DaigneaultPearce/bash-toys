@@ -1,0 +1,59 @@
+#!/bin/bash
+
+file1="./$1"
+
+#use -e to check if file exists
+if [ -e "$file1" ]; then
+	echo "$file1 exists"
+fi
+
+#use -f to check if normal file
+if [ -f "$file1" ]; then
+	echo "$file1 is normal"
+fi
+
+#use -r to check if its readable
+if [ -r "$file1" ]; then
+	echo "$file1 is readable"
+fi
+
+#use -w to check if its writeable
+if [ -w "$file1" ]; then
+	echo "$file1 is writable"
+fi
+
+#use -x to check if executable
+if [ -x "$file1" ]; then
+	echo "$file1 is executable"
+fi
+
+#use -d to check if directory
+if [ -d "$file1" ]; then
+	echo "$file1 is a directory"
+fi
+
+#use -L to check if symbolic link
+if [ -L "$file1" ]; then
+	echo "$file1 is a symbolic link"
+fi
+
+#use -p to check if pipe
+if [ -p "$file1" ]; then
+	echo "$file1 is a pipe"
+fi
+
+#use -S if network socket
+if [ -S "$file1" ]; then
+	echo "$file1 is a socket"
+fi
+
+#use -O is it owned by user
+if [ -O "$file1" ]; then
+	echo "$file1 is owned by user"
+fi
+
+#use -G is it owned by group
+if [ -G "$file1" ]; then
+	echo "$file1 is opwned by group"
+fi
+#so on and so on....
