@@ -1,0 +1,51 @@
+#!/bin/bash
+
+#xtended integer test
+read -p "Enter a number : " num
+
+if ((num == 10)); then
+	echo "Your number equals 10"
+fi
+
+if ((num >= 11)); then
+	echo "It is greater then 10"
+elif ((num <= 9));then
+	echo "It is less then ten"
+fi
+
+if (( (( num % 2 )) == 0 )); then
+	echo "It is even"
+fi
+
+if (( ((num > 0)) && ((num < 11)) )); then
+	echo "$num is between 1 and 10"
+fi
+
+#can use logial operators such as..
+#create a file samp_file and open it in vim
+touch samp_file && vim samp_file
+
+#if samp_dir doesnt exists then we want to make it
+#-d checks if it exists
+[ -d samp_dir ] || mkdir samp_dir
+
+#string tests
+str1=""
+str2="Sad"
+str3="Happy"
+
+if [ -z "$str1" ]; then
+	echo "str1 has no value"
+fi
+
+if [ "$str2" == "$str3" ]; then
+	echo "$str2 equals $str3"
+elif [ "$str2" != "$str3" ]; then
+	echo "$str2 is not equal to $str3"
+fi
+
+if [ "$str2" > "$str3" ]; then
+	echo "$str2 is greater then $str3"
+elif [ "$str2" < "$str3" ]; then
+	echo "$str2 is less then $str3"
+fi
