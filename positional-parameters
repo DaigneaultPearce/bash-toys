@@ -1,0 +1,23 @@
+#!/bin/bash
+
+#variables that can store data on the command line 0 - 9
+#0 is reserved for the executable
+
+echo "1st Argument : $1"
+
+sum=0
+
+while [[ $# -gt 0 ]]; do
+	num=$1
+	sum=$((sum + num))
+	#moves argemnts down a position
+	shift
+done
+
+echo "Sum : $sum"
+
+
+
+
+
+

@@ -1,0 +1,28 @@
+#!/bin/bash
+#parameter expansion ${parameter}
+
+#print a value with characters after
+name="Daigneault"
+echo "${name}'s toy"
+
+#replace dog with cat in the string
+samp_string="The dog climbed the tree"
+echo "${samp_string//dog/cat}"
+
+#if name exists print name otherwise print mike
+echo "I am ${name:=mike}"
+
+
+rand_str="A random string"
+#get string length
+echo "String Length : ${#rand_str}"
+
+#get string slice starting at index 2
+echo "${rand_str:2}"
+
+#get slice from index to index
+echo "${rand_str:2:7}"
+
+#get everthing that follows A and a space
+echo "${rand_str#*A }"
+
